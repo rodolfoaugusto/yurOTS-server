@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF - 8"?>
+<monster name="Earthblock" nameDescription="Earthblock" race="venom" experience="1" speed="172" manacost="0">
+	<health now="3500" max="3500" />
+	<look type="309" head="0" body="0" legs="0" feet="0" corpse="" />
+	<targetchange interval="1000" chance="10" />
+	<targetstrategy nearest="70" weakest="20" mostdamage="0" random="10" />
+	<script>
+        <event name="arena"/>
+	</script>
+	<flags>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="0" />
+		<flag convinceable="0" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="1" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks attack="50" skill="80" poison="100">
+		<attack name="poison" min="-150" variation="60" max="-225" range="7" chance="4">
+			<attribute key="shootEffect" value="poison" />
+			<attribute key="areaEffect" value="poison" />
+		</attack>
+		<attack name="lifedrain" min="-95" max="-155" range="1" chance="5" />
+		<attack name="fire" min="-150" max="-250" range="7" chance="3" />
+	</attacks>
+	<defenses armor="44" defense="40">
+		<defense name="speed" speedchange="65" variation="5" duration="20000" chance="18">
+			<attribute key="areaEffect" value="redshimmer" />
+		</defense>
+	</defenses>
+	<voices>
+		<voice sentence="Your fragile bones are like toothpicks to me." />
+		<voice sentence="You little weasel will not live to see another day." />
+		<voice sentence="I'm just a messenger of what's yet to come." />
+		<voice sentence="HRAAAAAAAAAAAAAAAARRRR" />
+		<voice sentence="I'm taking you down with me!" />
+	</voices>
+	<immunities>
+		<immunity fire="1" />
+		<immunity energy="1" />
+		<immunity outfit="1" />
+		<immunity lifedrain="1" />
+		<immunity paralyze="1" />
+		<immunity poison="1" />
+		<immunity invisible="1" />
+	</immunities>
+	<loot>
+	</loot>
+</monster>

@@ -1,0 +1,13 @@
+# GIMUD - Graphical Interface Multi User Dungeon
+# xodet.npc: Datenbank für den Magieladen-Besitzer Xodet
+
+Name = "Cody"
+Outfit = (128,4-114-132-115)
+Home = [5968,6021,7]
+Radius = 1
+
+Behaviour = {
+	ADDRESS,"hello$",! -> "You do not talk about Fight Club"
+	ADDRESS,"hi$",!    -> *
+	ADDRESS,!          -> Idle
+}

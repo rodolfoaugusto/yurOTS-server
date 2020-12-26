@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF - 8"?>
+<monster name="Dominator" nameDescription="Dominator" race="blood" experience="1" speed="95" manacost="490">
+	<health now="7000" max="7000" />
+	<look type="306" head="0" body="0" legs="0" feet="0" corpse="" />
+	<targetchange interval="1000" chance="5" />
+	<targetstrategy nearest="70" weakest="0" mostdamage="30" random="0" />
+	<script>
+        <event name="arena"/>
+	</script>
+	<flags>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="1" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks attack="130" skill="80">
+		<attack name="physical" min="-45" max="-195" range="7" chance="2">
+			<attribute key="shootEffect" value="energy" />
+		</attack>
+		<attack name="manadrain" min="-205" max="-365" range="7" chance="6" />
+	</attacks>
+	<defenses armor="17" defense="24">
+	</defenses>
+	<voices>
+		<voice sentence="Human, uh whil dyh!" />
+		<voice sentence="Youh ah trak!" />
+		<voice sentence="Let da mashing begin!" />
+	</voices>
+	<immunities>
+		<immunity fire="1" />
+		<immunity energy="1" />
+		<immunity outfit="1" />
+		<immunity lifedrain="1" />
+		<immunity paralyze="1" />
+		<immunity poison="1" />
+		<immunity invisible="1" />
+	</immunities>
+	<loot>
+	</loot>
+</monster>

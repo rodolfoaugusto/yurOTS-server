@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF - 8"?>
+<monster name="training monk" nameDescription="a training monk" race="blood" experience="0" speed="0" manacost="600">
+	<health now="84000" max="84000" />
+	<look type="57" head="0" body="0" legs="0" feet="0" corpse="4240" />
+	<targetchange interval="1000" chance="5" />
+	<targetstrategy nearest="70" weakest="20" mostdamage="10" random="0" />
+	<flags>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="1" />
+		<flag convinceable="0" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="1" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks attack="10" skill="10">
+		<attack name="healing" min="100" max="120" length="3" chance="3">
+			<attribute key="areaEffect" value="blueshimmer" />
+		</attack>
+	</attacks>
+	<defenses armor="10" defense="10">
+		<defense name="healing" min="8000" max="12000" chance="3">
+			<attribute key="areaEffect" value="blueshimmer" />
+		</defense>
+	</defenses>
+	<immunities>
+		<immunity fire="0" />
+		<immunity energy="0" />
+		<immunity outfit="1" />
+		<immunity lifedrain="1" />
+		<immunity paralyze="1" />
+		<immunity poison="0" />
+		<immunity invisible="1" />
+	</immunities>
+	<voices>
+		<voice sentence="Punch my face!" />
+		<voice sentence="Hit me!" yell="1" />
+	</voices>
+	<loot>
+	</loot>
+</monster>

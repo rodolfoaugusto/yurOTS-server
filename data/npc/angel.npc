@@ -1,0 +1,39 @@
+Name = "Angel"
+Outfit = (319,0-0-0-0)
+Home = [0,0,0]
+Radius = 2
+
+Behaviour = {
+ADDRESS,"hello$",!      -> "Welcome %N! Ask me about arena."
+ADDRESS,"hi$",!         -> *
+ADDRESS,!               -> Idle
+BUSY,"hello$",!         -> "Please wait a minute, %N.", Queue
+BUSY,"hi$",!            -> *
+BUSY,!                  -> NOP
+VANISH,!                -> ".."
+
+"bye"            -> "Good bye, %N!", Idle
+"farewell"       -> *
+"arena" -> "You can choose different levels: newbie, ultimate, god level."
+
+"newbie" -> "Are you ready to fight? You need to pay 80.000 gold coins. If you die, all your progress will be lost.",Price=80000,Topic=3
+Topic=3,"yes", QuestValue(7100)=1,!        -> "You already start this task."
+Topic=3,"yes",Level<80,!            -> "You need to level 80 or higher."
+Topic=3,"yes",CountMoney<Price,!            -> "You do not have enough money."
+Topic=3,"yes",!                             -> "You have the right to fight in the newbie arena. Again, if you die all your progress will be lost.", EffectOpp(16), DeleteMoney, SetQuestValue(7100,1)
+Topic=3,!                             -> "Ok. As you wish.."
+
+"ultimate" -> "Are you ready to fight? You need to pay 120.000 gold coins. If you die, all your progress will be lost.",Price=120000,Topic=4
+Topic=4,"yes", QuestValue(7200)=1,!        -> "You already start this task."
+Topic=4,"yes",Level<120,!            -> "You need to level 120 or higher."
+Topic=4,"yes",CountMoney<Price,!            -> "You do not have enough money."
+Topic=4,"yes",!                             -> "You have the right to fight in the ultimate arena. Again, if you die all your progress will be lost.", EffectOpp(21), DeleteMoney, SetQuestValue(7200,1)
+Topic=4,!                             -> "Ok. As you wish.."
+
+"god" -> "Are you ready to fight? You need to pay 150.000 gold coins. If you die, all your progress will be lost.",Price=150000,Topic=5
+Topic=5,"yes", QuestValue(7300)=1,!        -> "You already start this task."
+Topic=5,"yes",Level<150,!            -> "You need to level 150 or higher."
+Topic=5,"yes",CountMoney<Price,!            -> "You do not have enough money."
+Topic=5,"yes",!                             -> "You have the right to fight in the god arena. Again, if you die all your progress will be lost.", EffectOpp(12), DeleteMoney, SetQuestValue(7300,1)
+Topic=5,!                             -> "Ok. As you wish.."
+}

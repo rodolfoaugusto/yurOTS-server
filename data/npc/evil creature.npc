@@ -1,0 +1,34 @@
+# GIMUD - Graphical Interface Multi User Dungeon
+# captain1.npc: Kapitän Blaubaer in Thais
+
+Name = "Evil Creature"
+Outfit = (323,19-69-107-50)
+Home = [5991,6124,9]
+Radius = 1
+
+Behaviour = {
+ADDRESS,"hello$",!   -> "Finally, %N.. What a honour! I was waiting for you.. You can exit or fight the evil!"
+ADDRESS,"hi$",!      -> *
+ADDRESS,!                 -> Idle
+BUSY,"hello$",!           -> "Im busy!! I will bring you to death soon too.", Queue
+BUSY,"hi$",!              -> *
+BUSY,!                    -> NOP
+VANISH,!                  -> "Ffff.."
+
+ADDRESS,"exit" -> "Ffff..", Idle, EffectOpp(11), Teleport(5997,6122,7), EffectOpp(11)
+
+"exit"      -> "Are you sure?", Topic=2
+
+"bye"          -> "Good..!", Idle
+"farewell"     -> *
+"trip"         -> "To the death.."
+"passage"      -> *
+"town"         -> *
+"destination"  -> *
+"sail"         -> *
+"go"           -> *
+
+Topic=2,"yes" -> "Ffff..", Idle, EffectOpp(11), Teleport(5997,6122,7), EffectOpp(11)
+
+Topic>0                                 -> "Ffff.."
+}

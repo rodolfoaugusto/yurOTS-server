@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF - 8"?>
+<monster name="Medusa" nameDescription="a medusa" race="venom" experience="1" speed="145" manacost="0">
+	<health now="9500" max="9500" />
+	<look type="325" head="0" body="52" legs="128" feet="95" corpse="" />
+	<targetchange interval="1000" chance="50" />
+	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
+	<script>
+        <event name="arena"/>
+	</script>
+	<flags>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="0" />
+		<flag convinceable="0" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="1" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks attack="70" skill="80" poison="100">
+		<attack name="poison" min="-450" variation="60" max="-635" range="7" chance="4">
+			<attribute key="shootEffect" value="poison" />
+			<attribute key="areaEffect" value="poison" />
+		</attack>
+		<attack name="speed" speedchange="-130" variation="10" duration="25000" range="7" chance="5">
+			<attribute key="shootEffect" value="poison" />
+			<attribute key="areaEffect" value="poison" />
+		</attack>
+		<attack name="poisoncondition" count="450" radius="5" target="0" chance="6">
+			<attribute key="areaEffect" value="poison" />
+		</attack>
+		<attack name="poisoncondition" count="450" radius="5" target="0" chance="6">
+			<attribute key="areaEffect" value="poison" />
+		</attack>
+		<attack name="speed" speedchange="-120" variation="20" duration="20000" radius="5" target="0" chance="4">
+			<attribute key="areaEffect" value="poison" />
+		</attack>
+		<attack name="lifedrain" min="-440" variation="60" max="-520" range="7" radius="3" target="1" chance="3">
+			<attribute key="shootEffect" value="death" />
+			<attribute key="areaEffect" value="mortarea" />
+		</attack>
+	</attacks>
+	<immunities>
+		<immunity fire="0" />
+		<immunity energy="0" />
+		<immunity outfit="0" />
+		<immunity lifedrain="0" />
+		<immunity paralyze="1" />
+		<immunity poison="1" />
+		<immunity invisible="1" />
+	</immunities>
+	<voices>
+		<voice sentence="Look in my eyes!" yell="1" />
+	</voices>
+	<defenses armor="32" defense="50">
+		<defense name="healing" min="250" max="400" chance="4">
+			<attribute key="areaEffect" value="blueshimmer" />
+		</defense>
+	</defenses>
+	<loot>
+	</loot>
+</monster>

@@ -1,0 +1,39 @@
+Name = "Morty"
+Outfit = (57,0-0-0-0)
+Home = [6002,6043,7]
+Radius = 2
+
+Behaviour = {
+ADDRESS,"hello$",!      -> "Welcome, adventurer %N! If you are new in YurOTS, ask me for a new task."
+ADDRESS,"hi$",!         -> *
+ADDRESS,!               -> Idle
+BUSY,"hello$",!         -> "Please wait a minute, %N.", Queue
+BUSY,"hi$",!            -> *
+BUSY,"heal$",Burning>0 -> "You are burning, %N. I will help you.", Burning(0,0), EffectOpp(15)
+BUSY,"heal$",Poison>0  -> "You are poisoned, %N. I will help you.", Poison(0,0), EffectOpp(14)
+BUSY,"heal$",HP<40     -> "You are looking really bad, %N. Let me heal your wounds.", HP=40, EffectOpp(13)
+BUSY,"heal$"           -> "You aren't looking that bad, %N. Sorry, I can't help you."
+BUSY,!                  -> NOP
+VANISH,!                -> "Remember: If you are heavily wounded or poisoned, I will heal you."
+
+"bye"            -> "Good bye, %N!", Idle
+"farewell"       -> *
+"job"            -> "Job? I have no job."
+"name"           -> "My name is Morty."
+
+"heal$",Burning>0 -> "You are burning. I will help you.", Burning(0,0), EffectOpp(15)
+"heal$",Poison>0  -> "You are poisoned. I will help you.", Poison(0,0), EffectOpp(14)
+"heal$",HP<40     -> "You are looking really bad. Let me heal your wounds.", HP=40, EffectOpp(13)
+
+"time"           -> "Now, it is %T."
+
+"bless" -> "I can provide you all blessings. But you will have to sacrifice 100.000 gold to receive it. Are you still interested?",Price=100000,Topic=44
+
+Topic=44,"yes", QuestValue(888) > 0,!        -> "You already possess this blessing."
+Topic=44,"yes",CountMoney<Price,!            -> "Oh. You do not have enough money."
+Topic=44,"yes",!                             -> "You received all blessings. Keep using your amulet of loss to protect your equipment.", DeleteMoney, EffectOpp(13), SetQuestValue(888,1), Bless(1),Bless(2),Bless(3),Bless(4),Bless(5),Bless(6)
+Topic=44,!                             -> "Ok. As you wish."
+
+
+@"tasks.ndb"
+}

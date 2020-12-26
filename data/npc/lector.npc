@@ -1,0 +1,41 @@
+# GIMUD - Graphical Interface Multi User Dungeon
+# perac.npc: Datenbank für den Bogner Perac
+
+Name = "Lector"
+Outfit = (128,20-100-50-99)
+Home = [0,0,0]
+Radius = 1
+
+Behaviour = {
+ADDRESS,"hello$",! -> "Oh, please come in. What do you need?"
+ADDRESS,"hi$",!    -> *
+ADDRESS,!          -> Idle
+BUSY,"hello$",!    -> "Sorry, I am already talking to a customer."
+BUSY,"hi$",!       -> *
+BUSY,!             -> NOP
+VANISH,!           -> "Good bye."
+
+"bye"             -> "Good bye.", Idle
+"farewell"        -> *
+"time"            -> "Don't bother me. Go and buy a watch."
+
+"brown","mushroom"             -> Type=3725, Amount=1,  Price=5,  "Do you want to buy a brown mushroom for %P gold?", Topic=1
+%1,1<%1,"brown","mushroom"             -> Type=3725, Amount=%1,  Price=5*%1,  "Do you want to buy %A brown mushroom for %P gold?", Topic=1
+
+"meat"             -> Type=3577, Amount=1,  Price=5,  "Do you want to buy a meat for %P gold?", Topic=1
+%1,1<%1,"meat"             -> Type=3577, Amount=%1,  Price=5*%1,  "Do you want to buy %A meat for %P gold?", Topic=1
+
+"ham"             -> Type=3582, Amount=1,  Price=5,  "Do you want to buy a ham for %P gold?", Topic=1
+%1,1<%1,"ham"             -> Type=3582, Amount=%1,  Price=5*%1,  "Do you want to buy %A ham %P gold?", Topic=1
+
+"beer"             -> Type=2874,Data=3, Amount=1,  Price=5,  "Do you want to buy a beer for %P gold?", Topic=1
+%1,1<%1,"beer"             -> Type=2874,Data=3, Amount=%1,  Price=5*%1,  "Do you want to buy %A beer for %P gold?", Topic=1
+
+"buy"             -> "I am brown mushroom, meat and meat."
+
+Topic=1,"yes",CountMoney>=Price -> "Here you are.", DeleteMoney, Create(Type)
+Topic=1,"yes"                   -> "Come back, when you have enough money."
+Topic=1                         -> "Hmm, but next time."
+
+@"gen-t-distance-s.ndb"
+}

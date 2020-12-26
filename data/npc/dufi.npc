@@ -1,0 +1,38 @@
+# GIMUD - Graphical Interface Multi User Dungeon
+# xodet.npc: Datenbank für den Magieladen-Besitzer Xodet
+
+Name = "Dufi"
+Outfit = (128,24-77-10-20)
+Home = [5967,6047,7]
+Radius = 1
+
+Behaviour = {
+	ADDRESS,"hello$",! -> "Hello %N I sell scarfs (1k) and amulet of loss (35k)."
+	ADDRESS,"hi$",!    -> *
+	ADDRESS,!          -> Idle
+	BUSY,"hello$",!    -> "Sorry %N, I am already talking to a customer. Wait a minute, please.", Queue
+	BUSY,"hi$",!       -> *
+	BUSY,!             -> NOP
+	VANISH,!           -> "Good bye."
+
+	"bye"      -> "Good bye and come again.", Idle
+	"farewell" -> *
+
+	"aol"    -> Type=3057, Amount=1, Price=35000, "Do you want to buy a amulet of loss for %P gold?", Topic=1
+	"amulet","loss"    -> Type=3057, Amount=1, Price=35000, "Do you want to buy a amulet of loss for %P gold?", Topic=1
+	"scarf"    -> Type=3572, Amount=1, Price=1000, "Do you want to buy a scarf for %P gold?", Topic=1
+
+
+	%1,1<%1,"aol"    -> Type=3057, Amount=%1, Price=35000*%1, "Do you want to buy %A amulet of loss for %P gold?", Topic=1
+	%1,1<%1,"amulet","loss"    -> Type=3057, Amount=%1, Price=35000*%1, "Do you want to buy %A amulet of loss for %P gold?", Topic=1
+	%1,1<%1,"scarf"    -> Type=3572, Amount=%1, Price=1000*%1, "Do you want to buy %A scarf for %P gold?", Topic=1
+
+
+	Topic=1,"yes",CountMoney>=Price -> "Here you are.", DeleteMoney, Create(Type)
+	Topic=1,"yes"                   -> "Come back, when you have enough money."
+	Topic=1                         -> "Hmm, but next time."
+
+	Topic=3,"yes",Count(5226)>0 -> Amount=Count(5226), Price=Amount*5, "Here you are ... %P gold.", Delete(5226), CreateMoney
+	Topic=3,"yes"               -> "You don't have any empty vials."
+	Topic=3                     -> "Hmm, but please keep Tibia litter free."
+}

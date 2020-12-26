@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF - 8"?>
+<monster name="Shadow" nameDescription="Shadow" race="undead" experience="1" speed="135" manacost="0">
+	<health now="16500" max="16500" />
+	<look type="318" head="0" body="52" legs="128" feet="95" corpse="" />
+	<targetchange interval="1000" chance="50" />
+	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
+	<script>
+        <event name="arena"/>
+	</script>
+	<flags>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="0" />
+		<flag convinceable="0" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="3" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks attack="60" skill="60">
+		<attack name="physical" min="-45" max="-195" range="7" chance="2">
+			<attribute key="shootEffect" value="energy" />
+		</attack>
+		<attack name="manadrain" min="-605" max="-665" range="7" chance="6" />
+		<attack name="speed" speedchange="-80" variation="20" duration="40000" range="7" chance="5">
+			<attribute key="areaEffect" value="redshimmer" />
+		</attack>
+		<attack name="lifedrain" min="-340" max="-420" range="7" radius="3" target="1" chance="3">
+			<attribute key="shootEffect" value="death" />
+			<attribute key="areaEffect" value="mortarea" />
+		</attack>
+		<attack name="firefield" range="7" radius="1" target="1" chance="7">
+			<attribute key="shootEffect" value="fire" />
+		</attack>
+		<attack name="energyfield" range="7" radius="2" target="1" chance="5">
+			<attribute key="shootEffect" value="energy" />
+		</attack>
+		<attack name="energy" min="-605" max="-420" length="8" spread="1"  chance="3">
+			<attribute key="areaEffect" value="energy" />
+		</attack>
+	</attacks>
+	<defenses armor="32" defense="50">
+		<defense name="healing" min="300" max="460" chance="4">
+			<attribute key="areaEffect" value="blueshimmer" />
+		</defense>
+		<defense name="invisible" duration="20000" chance="4">
+			<attribute key="areaEffect" value="blueshimmer" />
+		</defense>
+	</defenses>
+	<summons maxSummons="4">
+		<summon name="bonebeast" chance="6" max="4" />
+	</summons>
+	<immunities>
+		<immunity fire="1" />
+		<immunity energy="1" />
+		<immunity outfit="1" />
+		<immunity lifedrain="1" />
+		<immunity paralyze="1" />
+		<immunity poison="1" />
+		<immunity invisible="1" />
+	</immunities>
+	<voices>
+		<voice sentence="My magic is the death!" />
+	</voices>
+	<loot>
+	</loot>
+</monster>

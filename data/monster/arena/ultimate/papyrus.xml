@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF - 8"?>
+<monster name="Papyrus" nameDescription="Papyrus" race="undead" experience="1" speed="75" manacost="510">
+	<health now="3000" max="3000" />
+	<look type="65" head="0" body="0" legs="0" feet="0" corpse="" />
+	<targetchange interval="1000" chance="0" />
+	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
+	<script>
+        <event name="arena"/>
+	</script>
+	<flags>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="1" />
+		<flag convinceable="0" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks attack="102" skill="60" poison="65">
+		<attack name="lifedrain" min="-190" max="-260" range="1" chance="7" />
+		<attack name="speed" speedchange="-80" variation="40" duration="10000" range="7" chance="13">
+			<attribute key="areaEffect" value="redshimmer" />
+		</attack>
+		<attack name="lifedrain" min="-240" variation="60" max="-320" range="7" radius="3" target="1" chance="3">
+			<attribute key="shootEffect" value="death" />
+			<attribute key="areaEffect" value="mortarea" />
+		</attack>
+	</attacks>
+	<defenses armor="14" defense="23">
+	</defenses>
+	<immunities>
+		<immunity fire="1" />
+		<immunity energy="1" />
+		<immunity outfit="1" />
+		<immunity lifedrain="1" />
+		<immunity paralyze="1" />
+		<immunity poison="1" />
+		<immunity invisible="1" />
+	</immunities>
+	<voices>
+		<voice sentence="I will tassste life again!" />
+	</voices>
+	<loot>
+	</loot>
+</monster>

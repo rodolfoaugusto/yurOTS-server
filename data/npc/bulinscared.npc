@@ -1,0 +1,22 @@
+# GIMUD - Graphical Interface Multi User Dungeon
+# maryza.npc: Datenbank für die Wirtin Maryza
+
+Name = "Bulin (scared)"
+Outfit = (160,60-110-58-76)
+Home = [5937,6148,9]
+Radius = 2
+
+Behaviour = {
+	ADDRESS,"hello$",! -> "RUUUUUUN! Up the stairs! The Mimic are escaped from the prison!"
+	ADDRESS,"hi$",!    -> *
+
+
+
+	ADDRESS,!                   -> Idle
+	BUSY,"hello$",!    -> "RUUUUUUUUN!", Queue
+	BUSY,"hi$",!       -> *
+	BUSY,!                      -> NOP
+	VANISH,!                    -> "TIME TO RUUUUN!"
+
+	"bye",               -> "WHAT YOU SAYING??! JUST RUUN!", Idle
+}

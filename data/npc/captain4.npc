@@ -1,0 +1,38 @@
+# GIMUD - Graphical Interface Multi User Dungeon
+# captain1.npc: Kapitän Blaubaer in Thais
+
+Name = "Captain Wolf"
+Outfit = (129,21-35-35-50)
+Home = [0,0,0]
+Radius = 3
+
+Behaviour = {
+ADDRESS,"paradise" -> "Set the sails!", Idle, EffectOpp(11), Teleport(6012,6056,7), EffectOpp(11)
+BUSY,"paradise" -> "Set the sails!", Idle, EffectOpp(11), Teleport(6012,6056,7), EffectOpp(11)
+
+ADDRESS,"hello$",male,!   -> "Welcome on board, Sir %N."
+ADDRESS,"hi$",male,!      -> *
+ADDRESS,"hello$",female,! -> "Welcome on board, Madam %N."
+ADDRESS,"hi$",female,!    -> *
+ADDRESS,!                 -> Idle
+BUSY,"hello$",!           -> "One moment please %N. You're next in line.", Queue
+BUSY,"hi$",!              -> *
+BUSY,!                    -> NOP
+VANISH,!                  -> "Good bye. Recommend us, if you were satisfied with our service."
+
+"paradise"      -> "Do you seek a passage to the paradise?", Topic=2
+
+"bye"          -> "Good bye. Recommend us, if you were satisfied with our service.", Idle
+"farewell"     -> *
+"trip"         -> "You want go to the paradise?"
+"passage"      -> *
+"town"         -> *
+"destination"  -> *
+"sail"         -> *
+"go"           -> *
+
+Topic=2,"yes" -> "Set the sails!", Idle, EffectOpp(11), Teleport(6012,6056,7), EffectOpp(11),SetQuestValue(227,2)
+
+Topic>0,"yes"                           -> "You don't have enough money."
+Topic>0                                 -> "We would like to serve you some time."
+}

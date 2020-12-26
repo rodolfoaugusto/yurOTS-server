@@ -1,0 +1,45 @@
+Name = "Geralt"
+Outfit = (130,0-113-114-114)
+Home = [0,0,0]
+Radius = 1
+
+Behaviour = {
+ADDRESS,"hello$" -> "Hello, hello, %N! Please come in, exchange your task points for exclusive equipments!"
+ADDRESS,"hi$",!    -> *
+ADDRESS,!          -> Idle
+BUSY,"hello$",!    -> "Please stand in line %N. I'll be with you in a moment.", Queue
+BUSY,"hi$",!       -> *
+BUSY,!             -> NOP
+VANISH,!           -> "Bye, bye."
+
+"equipments$" -> "I'm offering great equipments, like priest set, pyro set and winter set for know.", Topic=1
+"shop$",!    -> *
+"items$",!    -> *
+"list$",!    -> *
+
+"priest","set" -> "Well, can you choose between priest helmet, priest cape, priest legs and priest boots.", Topic=1
+"winter","set" -> "Well, can you choose between winter tunic, winter legs and winter armor.", Topic=1
+"fire","set" -> "Well, can you choose between pyro armor and pyro boots.", Topic=1
+
+"priest", "helmet"        -> Type=5179, Amount=1, Price=35, "You want to exchange a priest helmet for %P task points?", Topic=81
+"priest", "cape"        -> Type=5178, Amount=1, Price=35, "You want to exchange a priest cape for %P task points?", Topic=81
+"priest", "legs"        -> Type=5180, Amount=1, Price=35, "You want to exchange a priest legs for %P task points?", Topic=81
+"priest", "boots"        -> Type=5181, Amount=1, Price=35, "You want to exchange a priest boots for %P task points?", Topic=81
+
+"winter", "tunic"        -> Type=5164, Amount=1, Price=35, "You want to exchange a winter tunic for %P task points?", Topic=81
+"winter", "armor"        -> Type=5165, Amount=1, Price=35, "You want to exchange a winter armor for %P task points?", Topic=81
+"winter", "legs"        -> Type=5166, Amount=1, Price=35, "You want to exchange a winter legs for %P task points?", Topic=81
+
+"pyro", "armor"        -> Type=5147, Amount=1, Price=35, "You want to exchange a pyro armor for %P task points?", Topic=81
+"pyro", "boots"        -> Type=5146, Amount=1, Price=35, "You want to exchange a pyro boots for %P task points?", Topic=81
+
+Topic=81,"yes",Balance>=Price -> "Here you are.", Withdraw(Price), Create(Type)
+Topic=81,"yes"                           -> "Come back, when you have enough points."
+Topic=81                                 -> "Hmm, but I'm sure, it would fit nicely into your set."
+
+"balance"      -> Amount=Balance,"Your balance is %A task points.", Topic=1
+
+"bye"             -> "Bye, bye.", Idle
+"farewell"        -> *
+
+}

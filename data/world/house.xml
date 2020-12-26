@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<houses>
+	<house name="Pirate Street" houseid="1" entryx="6015" entryy="6048" entryz="7" rent="23000" townid="1" size="44" />
+	<house name="River Street V" houseid="2" entryx="5997" entryy="6049" entryz="7" rent="23000" townid="1" size="15" />
+	<house name="River Street IV" houseid="3" entryx="5992" entryy="6049" entryz="7" rent="23000" townid="1" size="15" />
+	<house name="River Street III" houseid="4" entryx="5987" entryy="6049" entryz="7" rent="23000" townid="1" size="15" />
+	<house name="River Street II" houseid="5" entryx="5973" entryy="6051" entryz="7" rent="23000" townid="1" size="12" />
+	<house name="River Street I" houseid="6" entryx="5968" entryy="6051" entryz="7" rent="23000" townid="1" size="12" />
+	<house name="Small Street I" houseid="7" entryx="5983" entryy="6032" entryz="7" rent="13000" townid="1" size="6" />
+	<house name="Small Street II" houseid="8" entryx="5985" entryy="6032" entryz="7" rent="8000" townid="1" size="3" />
+	<house name="Small Street III" houseid="9" entryx="5983" entryy="6032" entryz="6" rent="13000" townid="1" size="6" />
+	<house name="Small Street IV" houseid="10" entryx="5985" entryy="6032" entryz="6" rent="8000" townid="1" size="3" />
+	<house name="Small Street V" houseid="11" entryx="5983" entryy="6032" entryz="5" rent="13000" townid="1" size="6" />
+	<house name="Small Street VI" houseid="12" entryx="5985" entryy="6032" entryz="5" rent="8000" townid="1" size="3" />
+	<house name="Great Street I" houseid="13" entryx="5979" entryy="6024" entryz="7" rent="13000" townid="1" size="41" />
+	<house name="Great Street II" houseid="14" entryx="5987" entryy="6024" entryz="7" rent="13000" townid="1" size="21" />
+	<house name="Great Street III" houseid="15" entryx="5996" entryy="6025" entryz="7" rent="13000" townid="1" size="20" />
+	<house name="Great Street IV" houseid="16" entryx="6002" entryy="6028" entryz="7" rent="13000" townid="1" size="30" />
+	<house name="Upper Street I" houseid="17" entryx="6004" entryy="6022" entryz="6" rent="23000" townid="1" size="34" />
+	<house name="Upper Street III" houseid="18" entryx="6004" entryy="6024" entryz="6" rent="23000" townid="1" size="12" />
+	<house name="Upper Street II" houseid="19" entryx="6004" entryy="6026" entryz="6" rent="23000" townid="1" size="15" />
+	<house name="Upper Street IV" houseid="20" entryx="6007" entryy="6022" entryz="5" rent="23000" townid="1" size="22" />
+	<house name="Upper Street V" houseid="21" entryx="6007" entryy="6024" entryz="5" rent="23000" townid="1" size="25" />
+	<house name="Green Street III" houseid="22" entryx="6015" entryy="6024" entryz="7" rent="13000" townid="1" size="15" />
+	<house name="Green Street II" houseid="23" entryx="6019" entryy="6024" entryz="7" rent="13000" townid="1" size="15" />
+	<house name="Green Street I" houseid="24" entryx="6017" entryy="6027" entryz="7" rent="13000" townid="1" size="15" />
+	<house name="Castle of the Snakes" houseid="25" entryx="5942" entryy="6021" entryz="7" rent="100000" guildhall="true" townid="1" size="302" />
+	<house name="The Tibianic" houseid="26" entryx="6039" entryy="6043" entryz="6" rent="200000" guildhall="true" townid="1" size="355" />
+	<house name="Desert Street V" houseid="27" entryx="6044" entryy="6066" entryz="6" rent="3000" townid="1" size="21" />
+	<house name="Desert Street VI" houseid="28" entryx="6044" entryy="6066" entryz="6" rent="3000" townid="1" size="22" />
+	<house name="Desert Street II" houseid="29" entryx="6051" entryy="6064" entryz="7" rent="3000" townid="1" size="15" />
+	<house name="Desert Street I" houseid="30" entryx="6051" entryy="6068" entryz="7" rent="3000" townid="1" size="15" />
+	<house name="Desert Street IV" houseid="31" entryx="6051" entryy="6065" entryz="6" rent="3000" townid="1" size="30" />
+	<house name="Desert Street III" houseid="32" entryx="6051" entryy="6064" entryz="6" rent="3000" townid="1" size="15" />
+	<house name="Sand Mansion" houseid="33" entryx="6057" entryy="6091" entryz="7" rent="53000" townid="1" size="133" />
+	<house name="Jungle I" houseid="35" entryx="6015" entryy="6087" entryz="7" rent="13000" townid="1" size="15" />
+	<house name="Jungle II" houseid="36" entryx="6020" entryy="6089" entryz="7" rent="13000" townid="1" size="12" />
+	<house name="Jungle III" houseid="37" entryx="6017" entryy="6093" entryz="7" rent="13000" townid="1" size="12" />
+	<house name="Jungle IV" houseid="38" entryx="6023" entryy="6092" entryz="7" rent="13000" townid="1" size="12" />
+	<house name="Ice Land I" houseid="39" entryx="6136" entryy="6072" entryz="7" rent="13000" townid="1" size="70" />
+	<house name="Ice Land II" houseid="40" entryx="6145" entryy="6068" entryz="7" rent="13000" townid="1" size="19" />
+	<house name="Ice Land Gate" houseid="41" entryx="6128" entryy="6073" entryz="7" rent="23000" townid="1" size="43" />
+	<house name="Ice Land III" houseid="42" entryx="6131" entryy="6074" entryz="7" rent="13000" townid="1" size="25" />
+	<house name="Ice Land IV" houseid="43" entryx="6135" entryy="6085" entryz="7" rent="13000" townid="1" size="46" />
+	<house name="Ice Land V" houseid="44" entryx="6127" entryy="6080" entryz="7" rent="13000" townid="1" size="19" />
+	<house name="Ice Land VI" houseid="45" entryx="6136" entryy="6085" entryz="7" rent="13000" townid="1" size="45" />
+	<house name="Ice Land VII" houseid="46" entryx="6139" entryy="6084" entryz="7" rent="13000" townid="1" size="10" />
+	<house name="Ice Land VIII" houseid="47" entryx="6151" entryy="6074" entryz="7" rent="13000" townid="1" size="13" />
+	<house name="Ice Land IX" houseid="48" entryx="6156" entryy="6074" entryz="7" rent="13000" townid="1" size="13" />
+	<house name="Ice Land X" houseid="49" entryx="6150" entryy="6073" entryz="7" rent="13000" townid="1" size="11" />
+	<house name="Ice Land XI" houseid="50" entryx="6155" entryy="6073" entryz="7" rent="13000" townid="1" size="13" />
+	<house name="Ice Land XII" houseid="51" entryx="6146" entryy="6065" entryz="7" rent="13000" townid="1" size="13" />
+	<house name="Ice Land XIII" houseid="52" entryx="6153" entryy="6064" entryz="6" rent="13000" townid="1" size="13" />
+	<house name="Ice Land XIV" houseid="53" entryx="6158" entryy="6070" entryz="6" rent="13000" townid="1" size="24" />
+</houses>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF - 8"?>
+<monster name="Ramses" nameDescription="Ramses" race="undead" experience="1" speed="100" manacost="0">
+	<health now="4700" max="4700" />
+	<look type="88" head="0" body="0" legs="0" feet="0" corpse="4215" />
+	<targetchange interval="1000" chance="3" />
+	<targetstrategy nearest="80" weakest="10" mostdamage="10" random="0" />
+	<script>
+        <event name="arena"/>
+	</script>
+	<flags>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="0" />
+		<flag convinceable="0" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="1" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks attack="40" skill="55" poison="65">
+		<attack name="lifedrain" min="-50" max="-450" range="1" chance="15" />
+		<attack name="energy" min="-200" max="-500" range="7" chance="5">
+			<attribute key="shootEffect" value="energy" />
+			<attribute key="areaEffect" value="energy" />
+		</attack>
+		<attack name="physical" min="-200" max="-400" range="7" chance="5">
+			<attribute key="shootEffect" value="death" />
+			<attribute key="areaEffect" value="mortarea" />
+		</attack>
+		<attack name="speed" speedchange="-100" variation="10" duration="50000" range="7" chance="8">
+			<attribute key="areaEffect" value="redshimmer" />
+		</attack>
+		<attack name="drunk" duration="50000" range="7" chance="13">
+			<attribute key="shootEffect" value="energy" />
+			<attribute key="areaEffect" value="teleport" />
+		</attack>
+		<attack name="outfit" monster="pig" duration="12000" range="7" chance="7">
+			<attribute key="areaEffect" value="blueshimmer" />
+		</attack>
+	</attacks>
+	<defenses armor="40" defense="65">
+		<defense name="healing" min="200" max="500" chance="5">
+			<attribute key="areaEffect" value="blueshimmer" />
+		</defense>
+		<defense name="outfit" monster="demon" duration="4000" chance="20">
+			<attribute key="areaEffect" value="blueshimmer" />
+		</defense>
+	</defenses>
+	<immunities>
+		<immunity fire="1" />
+		<immunity energy="1" />
+		<immunity outfit="1" />
+		<immunity lifedrain="1" />
+		<immunity paralyze="1" />
+		<immunity poison="1" />
+		<immunity invisible="1" />
+	</immunities>
+	<summons maxSummons="1">
+		<summon name="demon" chance="9" max="1" />
+	</summons>
+	<voices>
+		<voice sentence="Abrah Kadabrah!" />
+		<voice sentence="Nothing hidden in my warpings." />
+		<voice sentence="It's not a trick, it's Rahemos." />
+		<voice sentence="Meet my dear friend from hell." />
+	</voices>
+	<loot>
+	</loot>
+</monster>

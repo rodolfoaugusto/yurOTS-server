@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF - 8"?>
+<monster name="Ancient" nameDescription="Ancient" race="venom" experience="720" speed="69" manacost="0">
+	<health now="3000" max="3000" />
+	<look type="79" head="0" body="0" legs="0" feet="0" corpse="4185" />
+	<targetchange interval="1000" chance="10" />
+	<targetstrategy nearest="70" weakest="20" mostdamage="0" random="10" />
+	<script>
+        <event name="arena"/>
+	</script>
+	<flags>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="0" />
+		<flag convinceable="0" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="1" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks attack="50" skill="80" poison="100">
+		<attack name="poison" min="-205" max="-335" range="7" chance="4">
+			<attribute key="shootEffect" value="poison" />
+			<attribute key="areaEffect" value="poison" />
+		</attack>
+		<attack name="speed" speedchange="-90" variation="10" duration="25000" range="7" chance="8">
+			<attribute key="shootEffect" value="poison" />
+			<attribute key="areaEffect" value="poison" />
+		</attack>
+		<attack name="poisoncondition" count="450" radius="5" target="0" chance="6">
+			<attribute key="areaEffect" value="poison" />
+		</attack>
+		<attack name="poisoncondition" count="450" radius="5" target="0" chance="6">
+			<attribute key="areaEffect" value="poison" />
+		</attack>
+		<attack name="speed" speedchange="-80" variation="20" duration="20000" radius="5" target="0" chance="4">
+			<attribute key="areaEffect" value="poison" />
+		</attack>
+	</attacks>
+	<defenses armor="36" defense="33">
+		<defense name="speed" speedchange="85" variation="5" duration="9000" chance="13">
+			<attribute key="areaEffect" value="redshimmer" />
+		</defense>
+	</defenses>
+	<immunities>
+		<immunity fire="1" />
+		<immunity energy="1" />
+		<immunity outfit="1" />
+		<immunity lifedrain="1" />
+		<immunity paralyze="1" />
+		<immunity poison="1" />
+		<immunity invisible="1" />
+	</immunities>
+	<summons maxSummons="6">
+		<summon name="scarab" chance="3" max="6" />
+	</summons>
+	<loot>
+	</loot>
+</monster>

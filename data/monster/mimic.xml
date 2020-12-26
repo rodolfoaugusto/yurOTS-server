@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF - 8"?>
+<monster name="mimic" nameDescription="a mimic" race="undead" experience="18000" speed="200" manacost="250">
+	<health now="12000" max="12000" />
+	<look typeex="2483" head="0" body="0" legs="0" feet="0" corpse="2483" />
+	<targetchange interval="1000" chance="10" />
+	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
+	<script>
+	        <event name="mimicdeath"/>
+	</script>
+	<flags>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="0" />
+		<flag convinceable="0" />
+		<flag pushable="1" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="3" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks attack="40" skill="75">
+		<attack name="energy" min="-175" max="-455" length="8" spread="1"  chance="3">
+			<attribute key="areaEffect" value="energy" />
+		</attack>
+		<attack name="drunk" duration="60000" range="7" chance="4">
+			<attribute key="shootEffect" value="energy" />
+			<attribute key="areaEffect" value="teleport" />
+		</attack>
+		<attack name="manadrain" min="-300" max="-600" range="7" chance="8" />
+		<attack name="manadrain" min="-150" max="-350" radius="5" target="0" chance="17">
+			<attribute key="areaEffect" value="poison" />
+		</attack>
+	</attacks>	
+	<defenses armor="42" defense="60">
+		<defense name="mimic" chance="2"/>
+		<defense name="mimicswitch" chance="2"/>
+		<defense name="invisible" duration="2000" chance="10">
+			<attribute key="areaEffect" value="blueshimmer" />
+		</defense>
+	</defenses>
+	<immunities>
+		<immunity fire="1" />
+		<immunity energy="1" />
+		<immunity outfit="1" />
+		<immunity lifedrain="1" />
+		<immunity paralyze="1" />
+		<immunity poison="1" />
+		<immunity invisible="1" />
+	</immunities>
+	<voices>
+		<voice sentence="Reality is an illusion!" />
+		<voice sentence="Now you see me! Now you dont.." />
+		<voice sentence="You cant see my moves! HIHIHIHIHI" />
+	</voices>
+	<summons maxSummons="5">
+		<summon name="mimicsummon" chance="2" max="5" />
+	</summons>
+</monster>

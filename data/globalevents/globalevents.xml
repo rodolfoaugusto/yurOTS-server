@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<globalevents>
+	<globalevent type="startup" name="ServerStartup" script="startup.lua"/>
+	<globalevent type="record" name="PlayerRecord" script="record.lua"/>
+	<globalevent name="Server Save" time="04:55:00" script="serversave.lua" />
+	<globalevent name="shop" interval="30000" script="shop.lua"/>
+	<globalevent name="lavaEffects" interval="10000" script="lavaeffects.lua"/>
+	<globalevent name="save" interval="1200000" script="save.lua"/>
+	<globalevent name="broadcast" interval="900000" script="broadcast.lua"/>
+</globalevents>

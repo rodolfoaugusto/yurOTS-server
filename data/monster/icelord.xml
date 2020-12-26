@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF - 8"?>
+<monster name="ice lord" nameDescription="a ice lord" race="blood" experience="7500" speed="225" manacost="0">
+	<health now="5800" max="5800" />
+	<look type="305" head="95" body="95" legs="95" feet="95" corpse="5129" />
+	<targetchange interval="1000" chance="3" />
+	<targetstrategy nearest="80" weakest="10" mostdamage="10" random="0" />
+	<flags>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="0" />
+		<flag convinceable="0" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="1" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks attack="100" skill="88">
+		<attack name="physical" min="-325" max="-420" range="7" chance="7">
+			<attribute key="shootEffect" value="ice" />
+			<attribute key="areaEffect" value="icearea" />
+		</attack>
+		<attack name="drunk" duration="3000" range="6" chance="11">
+			<attribute key="shootEffect" value="poison" />
+			<attribute key="areaEffect" value="poison" />
+		</attack>
+	</attacks>
+	<defenses armor="60" defense="80">
+	</defenses>
+	<immunities>
+		<immunity fire="1" />
+		<immunity energy="1" />
+		<immunity outfit="1" />
+		<immunity lifedrain="1" />
+		<immunity paralyze="1" />
+		<immunity poison="1" />
+		<immunity invisible="1" />
+	</immunities>
+	<voices>
+		<voice sentence="NO MERCY!" yell="1" />
+	</voices>
+	<loot>
+		<item id="3079" countmax="1" chance="5" /> <!-- boots of haste -->
+		<item id="3035" countmax="5" chance="333" /> <!-- a gold coin -->
+		<item id="3035" countmax="2" chance="222" /> <!-- a gold coin -->
+		<item id="3016" countmax="1" chance="12" /> <!-- a ruby necklace -->
+	</loot>
+</monster>

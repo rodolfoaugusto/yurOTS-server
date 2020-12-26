@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF - 8"?>
+<monster name="sighter" nameDescription="a sighter" race="blood" experience="350" speed="95" manacost="530">
+	<health now="300" max="300" />
+	<look type="301" head="95" body="116" legs="120" feet="115" corpse="5123" />
+	<targetchange interval="1000" chance="10" />
+	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
+	<flags>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="4" />
+		<flag runonhealth="10" />
+	</flags>
+	<attacks attack="20" skill="25">
+		<attack name="physical" min="-90" max="-160" range="7" chance="2">
+			<attribute key="shootEffect" value="drillarrow" />
+		</attack>
+	</attacks>
+	<defenses armor="8" defense="10">
+	</defenses>
+	<voices>
+		<voice sentence="Guess who we are hunting, hahaha!" />
+	</voices>
+	<loot>
+		<item id="5094" countmax="10" chance="700" /> <!-- an arrow -->
+		<item id="5094" countmax="12" chance="400" /> <!-- an arrow -->
+		<item id="3359" countmax="1" chance="50" /> <!-- a brass armor -->
+		<item id="3354" countmax="1" chance="50" /> <!-- a brass helmet -->
+		<item id="3449" countmax="3" chance="50" /> <!-- a burst arrow -->
+		<item id="3601" countmax="2" chance="110" /> <!-- a roll -->
+		<item id="5096" countmax="1" chance="4" /> <!-- a drill bow -->
+		<item id="3030" countmax="1" chance="10" /> <!-- a small ruby -->
+		<item id="2920" countmax="1" chance="50" /> <!-- a torch -->
+	</loot>
+</monster>

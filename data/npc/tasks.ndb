@@ -1,0 +1,60 @@
+
+"task",QuestValue(18000)>0 -> "You started a task, cancel first. %N"
+"task",QuestValue(18000)<1 -> "What task you want start?",topic=6
+"no", topic=6 -> "Oh! What a shame.. Sometimes is necessary to be brave."
+
+"cancel",QuestValue(18000)>0 -> "You lose all your development in task. Whant start a new task now?",SetQuestValue(18000,0),SetQuestValue(18200,0),SetQuestValue(18300,0),SetQuestValue(18400,0),SetQuestValue(18500,0),SetQuestValue(18600,0),topic=6
+"leave",QuestValue(18000)>0 -> "You lose all your development in task. Whant start a new task now?",SetQuestValue(18000,0),SetQuestValue(18200,0),SetQuestValue(18300,0),SetQuestValue(18400,0),SetQuestValue(18500,0),SetQuestValue(18600,0),topic=6
+
+"reward",QuestValue(18000)=0 -> "You dont have a active task."
+"reward",QuestValue(18000)>0,QuestValue(18300)>0,QuestValue(18200)=QuestValue(18300) -> "Good job, here is your reward!",rewardTask(QuestValue(18400),QuestValue(18500),QuestValue(18600)),SetQuestValue(18200,0),SetQuestValue(18300,0),SetQuestValue(18400,0),SetQuestValue(18500,0),SetQuestValue(18600,0),finishTask
+"reward",QuestValue(18000)>0,QuestValue(18200)<QuestValue(18300) -> "Your task is not completed, return when you are done!"
+"reward",QuestValue(18000)>0,QuestValue(18300)=0 -> "Your task is not completed, return when you are done!"
+
+QuestValue(18000)>0,topic=6 -> "You started a task, cancel first. %N"
+
+"demon",QuestValue(19359)=1,topic=6 -> "You have been finished that task!"
+"demon",QuestValue(18000)<1,topic=6 -> "Good luck with your new task!",SetQuestValue(18000,359),SetQuestValue(18200,0),SetQuestValue(18300,0)
+"winter soul",QuestValue(19358)=1,topic=6 -> "You have been finished that task!"
+"winter soul",QuestValue(18000)<1,topic=6 -> "Good luck with your new task!",SetQuestValue(18000,358),SetQuestValue(18200,0),SetQuestValue(18300,0)
+"shadow priest",QuestValue(19357)=1,topic=6 -> "You have been finished that task!"
+"shadow priest",QuestValue(18000)<1,topic=6 -> "Good luck with your new task!",SetQuestValue(18000,357),SetQuestValue(18200,0),SetQuestValue(18300,0)
+"cold soldier",QuestValue(19356)=1,topic=6 -> "You have been finished that task!"
+"cold soldier",QuestValue(18000)<1,topic=6 -> "Good luck with your new task!",SetQuestValue(18000,356),SetQuestValue(18200,0),SetQuestValue(18300,0)
+"hellspawn",QuestValue(19355)=1,topic=6 -> "You have been finished that task!"
+"hellspawn",QuestValue(18000)<1,topic=6 -> "Good luck with your new task!",SetQuestValue(18000,355),SetQuestValue(18200,0),SetQuestValue(18300,0)
+"behemoth",QuestValue(19354)=1,topic=6 -> "You have been finished that task!"
+"behemoth",QuestValue(18000)<1,topic=6 -> "Good luck with your new task!",SetQuestValue(18000,354),SetQuestValue(18200,0),SetQuestValue(18300,0)
+"warlock",QuestValue(19353)=1,topic=6 -> "You have been finished that task!"
+"warlock",QuestValue(18000)<1,topic=6 -> "Good luck with your new task!",SetQuestValue(18000,353),SetQuestValue(18200,0),SetQuestValue(18300,0)
+"ice creatures",QuestValue(18000)<1,topic=6 -> "Good luck with your new task!",SetQuestValue(18000,352),SetQuestValue(18200,0),SetQuestValue(18300,0)
+"dark mages",QuestValue(18000)<1,topic=6 -> "Good luck with your new task!",SetQuestValue(18000,351),SetQuestValue(18200,0),SetQuestValue(18300,0)
+"jungle giants",QuestValue(18000)<1,topic=6 -> "Good luck with your new task!",SetQuestValue(18000,350),SetQuestValue(18200,0),SetQuestValue(18300,0)
+"dragons",QuestValue(18000)<1,topic=6 -> "Good luck with your new task!",SetQuestValue(18000,349),SetQuestValue(18200,0),SetQuestValue(18300,0)
+"ancient scarab",QuestValue(18000)<1,topic=6 -> "Good luck with your new task!",SetQuestValue(18000,348),SetQuestValue(18200,0),SetQuestValue(18300,0)
+"djinns",QuestValue(18000)<1,topic=6 -> "Good luck with your new task!",SetQuestValue(18000,347),SetQuestValue(18200,0),SetQuestValue(18300,0)
+"giant spider",QuestValue(18000)<1,topic=6 -> "Good luck with your new task!",SetQuestValue(18000,346),SetQuestValue(18200,0),SetQuestValue(18300,0)
+"great warriors",QuestValue(18000)<1,topic=6 -> "Good luck with your new task!",SetQuestValue(18000,345),SetQuestValue(18200,0),SetQuestValue(18300,0)
+"tomb members",QuestValue(18000)<1,topic=6 -> "Good luck with your new task!",SetQuestValue(18000,344),SetQuestValue(18200,0),SetQuestValue(18300,0)
+"cyclops",QuestValue(18000)<1,topic=6 -> "Good luck with your new task!",SetQuestValue(18000,343),SetQuestValue(18200,0),SetQuestValue(18300,0)
+"minotaurs",QuestValue(18000)<1,topic=6 -> "Good luck with your new task!",SetQuestValue(18000,342),SetQuestValue(18200,0),SetQuestValue(18300,0)
+"humans",QuestValue(18000)<1,topic=6 -> "Good luck with your new task!",SetQuestValue(18000,341),SetQuestValue(18200,0),SetQuestValue(18300,0)
+"dwarves",QuestValue(18000)<1,topic=6 -> "Good luck with your new task!",SetQuestValue(18000,340),SetQuestValue(18200,0),SetQuestValue(18300,0)
+"magicians",QuestValue(18000)<1,topic=6 -> "Good luck with your new task!",SetQuestValue(18000,339),SetQuestValue(18200,0),SetQuestValue(18300,0)
+"orcs",QuestValue(18000)<1,topic=6 -> "Good luck with your new task!",SetQuestValue(18000,338),SetQuestValue(18200,0),SetQuestValue(18300,0)
+"elves",QuestValue(18000)<1,topic=6 -> "Good luck with your new task!",SetQuestValue(18000,337),SetQuestValue(18200,0),SetQuestValue(18300,0)
+"pyromancers",QuestValue(18000)<1,topic=6 -> "Good luck with your new task!",SetQuestValue(18000,336),SetQuestValue(18200,0),SetQuestValue(18300,0)
+"mammals",QuestValue(18000)<1,topic=6 -> "Good luck with your new task!",SetQuestValue(18000,335),SetQuestValue(18200,0),SetQuestValue(18300,0)
+"insects",QuestValue(18000)<1,topic=6 -> "Good luck with your new task!",SetQuestValue(18000,334),SetQuestValue(18200,0),SetQuestValue(18300,0)
+"small evils",QuestValue(18000)<1,topic=6 -> "Good luck with your new task!",SetQuestValue(18000,333),SetQuestValue(18200,0),SetQuestValue(18300,0)
+"trolls",QuestValue(18000)<1,topic=6 -> "Good luck with your new task!",SetQuestValue(18000,332),SetQuestValue(18200,0),SetQuestValue(18300,0)
+"rotworm",QuestValue(19331)=1,topic=6 -> "You have been finished that task!"
+"rotworm",QuestValue(18000)<1,topic=6 -> "Good luck with your new task!",SetQuestValue(18000,331),SetQuestValue(18200,0),SetQuestValue(18300,0)
+"valkyries",QuestValue(19330)=1,topic=6 -> "You have been finished that task!"
+"valkyries",QuestValue(18000)<1,topic=6 -> "Good luck with your new task!",SetQuestValue(18000,330),SetQuestValue(18200,0),SetQuestValue(18300,0)
+"amazon",QuestValue(19329)=1,topic=6 -> "You have been finished that task!"
+"amazon",QuestValue(18000)<1,topic=6 -> "Good luck with your new task!",SetQuestValue(18000,329),SetQuestValue(18200,0),SetQuestValue(18300,0)
+"toxics",QuestValue(19328)=1,topic=6 -> "You have been finished that task!"
+"toxics",QuestValue(18000)<1,topic=6 -> "Good luck with your new task!",SetQuestValue(18000,328),SetQuestValue(18200,0),SetQuestValue(18300,0)
+"rats",QuestValue(19325)=1,topic=6 -> "You have been finished that task!"
+"rats",QuestValue(18000)<1,topic=6 -> "Good luck with your new task!",SetQuestValue(18000,325),SetQuestValue(18200,0),SetQuestValue(18300,0)

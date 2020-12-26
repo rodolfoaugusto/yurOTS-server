@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF - 8"?>
+<monster name="deathfly" nameDescription="a deathfly" race="undead" experience="1000" speed="292" manacost="0">
+	<health now="100" max="100" />
+	<look type="353" head="0" body="0" legs="0" feet="0" corpse="0" />
+	<targetchange interval="1000" chance="10" />
+	<targetstrategy nearest="70" weakest="20" mostdamage="0" random="10" />
+	<flags>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="0" />
+		<flag convinceable="0" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="1" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks attack="1" skill="1">
+		<attack name="speed" speedchange="-70" variation="20" duration="30000" range="7" chance="6">
+			<attribute key="areaEffect" value="stun" />
+		</attack>
+		<attack name="death" min="-125" max="-165" range="1" chance="1">
+			<attribute key="areaEffect" value="groundshaker" />
+		</attack>
+	</attacks>
+	<defenses armor="44" defense="40">
+		<defense name="invisible" duration="20000" chance="10">
+			<attribute key="areaEffect" value="blueshimmer" />
+		</defense>
+		<defense name="speed" speedchange="65" variation="5" duration="20000" chance="18">
+			<attribute key="areaEffect" value="redshimmer" />
+		</defense>
+	</defenses>
+	<voices>
+		<voice sentence="zzzzzzzzzzsssss" />
+	</voices>
+	<immunities>
+		<immunity fire="0" />
+		<immunity energy="1" />
+		<immunity outfit="1" />
+		<immunity lifedrain="1" />
+		<immunity paralyze="1" />
+		<immunity poison="0" />
+		<immunity invisible="1" />
+	</immunities>
+</monster>

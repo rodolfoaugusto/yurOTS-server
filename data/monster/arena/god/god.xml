@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF - 8"?>
+<monster name="GOD" nameDescription="GOD" race="undead" experience="1" speed="0" manacost="510">
+	<health now="8200" max="8200" />
+	<look type="322" head="0" body="0" legs="0" feet="0" corpse="" />
+	<targetchange interval="1000" chance="0" />
+	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
+	<flags>
+		<flag summonable="0" />
+		<flag attackable="0" />
+		<flag hostile="1" />
+		<flag illusionable="0" />
+		<flag convinceable="0" />
+		<flag pushable="1" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="1" />
+		<flag runonhealth="20" />
+	</flags>
+	<attacks attack="1" skill="1">
+	</attacks>
+	<defenses armor="100" defense="100">
+	</defenses>
+	<immunities>
+		<immunity fire="1" />
+		<immunity energy="1" />
+		<immunity physical="1" />
+		<immunity outfit="1" />
+		<immunity lifedrain="1" />
+		<immunity poison="1" />
+		<immunity invisible="1" />
+	</immunities>
+	<voices>
+		<voice sentence="Time to pray!" />
+		<voice sentence="HOHOHO Sweet little rat..." />
+	</voices>
+</monster>

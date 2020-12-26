@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF - 8"?>
+<monster name="mutant rabbit" nameDescription="a mutant rabbit" race="blood" experience="0" speed="500" manacost="220">
+	<health now="500000" max="500000" />
+	<look type="74" head="0" body="0" legs="0" feet="0" corpse="4173" />
+	<targetchange interval="1000" chance="5" />
+	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
+	<!-- <script>
+        <event name="easter"/>
+	</script> -->
+	<flags>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="2" />
+		<flag runonhealth="15" />
+	</flags>
+	<immunities>
+		<immunity fire="0" />
+		<immunity energy="0" />
+		<immunity outfit="0" />
+		<immunity lifedrain="0" />
+		<immunity paralyze="0" />
+		<immunity poison="0" />
+		<immunity invisible="1" />
+	</immunities>
+	<attacks attack="1" skill="1">		
+		<attack name="easterbomb" min="10" max="20" chance="2"/>
+	</attacks>
+	<defenses armor="1" defense="2">
+	</defenses>
+
+	<summons maxSummons="15">
+		<summon name="demon" chance="10" max="10" />
+	</summons>
+	<loot>
+		<item id="5102" countmax="1" chance="800" />
+		<item id="5090" countmax="1" chance="800" />
+		<item id="5196" countmax="1" chance="800" />		
+		<item id="5204" countmax="1" chance="800" />		
+		<item id="3365" countmax="1" chance="800" />
+	</loot>
+</monster>

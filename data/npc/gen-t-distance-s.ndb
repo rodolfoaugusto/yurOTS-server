@@ -1,0 +1,8 @@
+
+
+"drill arrow"            -> Type=5094, Amount=1, Price=15,   "Do you want to buy an drill arrow for %P gold?", Topic=55
+%1,1<%1,"drill arrow"            -> Type=5094, Amount=%1, Price=10*%1,   "Do you want to buy %A drill arrows for %P gold?", Topic=55
+
+Topic=55,"yes",CountMoney>=Price -> "Here you are.", DeleteMoney, Create(Type)
+Topic=55,"yes"                   -> "Come back, when you have enough money."
+Topic=55                         -> "Hmm, but next time."

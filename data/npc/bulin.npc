@@ -1,0 +1,26 @@
+# GIMUD - Graphical Interface Multi User Dungeon
+# maryza.npc: Datenbank für die Wirtin Maryza
+
+Name = "Bulin"
+Outfit = (160,60-110-58-76)
+Home = [5977,6067,7]
+Radius = 2
+
+Behaviour = {
+	ADDRESS,"hello",QuestValue(12323)=1,! -> "Oh, thank you! I dont have nothing in my pocket to help you in your journey, but take my copy key of the prison and get a armor in my locker.. Go to the south.. To enter in prison just turn off torch in the wall.",Type=2969,Data=3030,Amount=1,Create(Type),SetQuestValue(12323,2)
+	ADDRESS,"hi",QuestValue(12323)=1    -> *
+
+
+	ADDRESS,"hello",QuestValue(12323)<1,! -> "Oh my Durin!! My friend was taken..!"
+	ADDRESS,"hi",QuestValue(12323)<1,!    -> *
+
+
+	ADDRESS,QuestValue(12323)<1,!                   -> Idle
+	BUSY,"hello",QuestValue(12323)<1,!    -> "Please, help me!", Queue
+	BUSY,"hi",QuestValue(12323)<1,!       -> *
+	BUSY,!                      -> NOP
+	VANISH,QuestValue(12323)<1,!                    -> "HEY! Help me....!"
+
+	"bye",QuestValue(12323)<1               -> "Help me, brave adventurer!", Idle
+	"bye",QuestValue(12323)>1               -> "I will always be grateful to you!", Idle
+}

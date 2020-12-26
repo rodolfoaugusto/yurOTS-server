@@ -1,0 +1,25 @@
+# GIMUD - Graphical Interface Multi User Dungeon
+# queen.npc: Datenbank für die Königin von Carlin
+
+Name = "Orlan"
+Outfit = (131,79-79-79-79)
+Home = [5966,6040,4]
+Radius = 1
+
+Behaviour = {
+ADDRESS,"hello"!       -> "I sell premiums and promotions."
+ADDRESS,"hi",!        -> *
+ADDRESS,!                       -> Idle
+BUSY,!                          -> NOP
+VANISH,!                        -> "Hmn.."
+
+"bye"            -> "Farewell, %N!", Idle
+"farewell"       -> *
+
+"promot"                         -> Price=20000, "Do you want to be promoted in your vocation for %P gold?", Topic=4
+Topic=4,"yes",Promoted,!         -> "You are already promoted."
+Topic=4,"yes",Level<20,!         -> "You need to be at least level 20 in order to be promoted."
+Topic=4,"yes",CountMoney<Price,! -> "You do not have enough money."
+Topic=4,"yes"            -> "Congratulations! You are now promoted.", Promote, DeleteMoney
+Topic=4                          -> "Ok, then not."	
+}

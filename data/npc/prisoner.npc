@@ -1,0 +1,20 @@
+# GIMUD - Graphical Interface Multi User Dungeon
+# prisoner.npc: Datenbank für den Prisoner alias Mad Mage
+
+Name = "Human Prisoner"
+Outfit = (130,81-40-55-94)
+Home = [5966,6148,11] 
+Radius = 0
+
+Behaviour = {
+ADDRESS,"hello$",! -> "That is not fair! This mimic killed everybody and said to tell this story to others.."
+ADDRESS,"hi$",!    -> *
+ADDRESS,!          -> Idle
+BUSY,"hello$",!    -> "Come on! Help me escape.. I haven´t had a visitor for some time and right now there are two to rescue me! Hehehe! Great!"
+BUSY,"hi$",!       -> *
+BUSY,!             -> NOP
+VANISH,!           -> "Good bye! Don't forget about this story."
+
+"bye"         	-> "Holy GOD!", Idle
+"farewell"      -> *
+}

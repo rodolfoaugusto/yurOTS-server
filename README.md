@@ -14,7 +14,7 @@
 Run those commands on Linux Terminal (step by step)
 - Enter the root: ``sudo -i``
 - Create the main folder: ``cd /var && mkdir yurots && chmod 777 -R /var/yurots``
-- Clone the repository: ``https://github.com/rodolfoaugusto/yurOTS-server.git server``
+- Clone the repository: ``git clone https://github.com/rodolfoaugusto/yurOTS-server.git server``
 - Install the libraries and tools: ``apt-get install screen zip git cmake build-essential liblua5.2-dev libgmp3-dev libmysqlclient-dev libboost-system-dev libboost-iostreams-dev libpugixml-dev libcrypto++-dev libboost-filesystem-dev -y``
 - Enter the folder and start compiling: ``cd server && mkdir build && cd build && cmake .. && make``
 - Move the generated file to main folder: ``mv /var/yurots/server/build/yurOTS /var/yurots/server && cd ..``
